@@ -31,11 +31,12 @@ def plot_results(results, save_plots=True):
     
     # Create figure with 6 subplots - use constrained_layout to prevent overlap
     fig = plt.figure(figsize=(16, 14), constrained_layout=True)
-    gs = fig.add_gridspec(3, 2, hspace=0.3, wspace=0.25)
+    # Add top margin for the title
+    gs = fig.add_gridspec(3, 2, hspace=0.3, wspace=0.25, top=0.96)
     
-    # Add title with proper spacing
+    # Add title with proper spacing - positioned higher with more space below
     fig.suptitle('Grid-Aware Data Center Optimization - 24 Hour Simulation', 
-                 fontsize=15, fontweight='bold', y=0.995)
+                 fontsize=14, fontweight='bold', y=0.985)
     
     # 1. Power Consumption
     ax = fig.add_subplot(gs[0, 0])
